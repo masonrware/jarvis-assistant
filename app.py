@@ -56,5 +56,18 @@ def add_article():
     return article_schema.jsonify(articles)
 
 
+@app.route('/update/<id>/', methods=['PUT'])
+def update_article(id):
+    article = Articles.query.get(id)
+
+    title = request.json['title']
+    body = request.json['body']
+    article.title = title
+    article.body = body
+
+    db.session.commit()
+    return article_schema.jsonify(article)
+
+
 if __name__ == '__main__':
     app.run(host='localhost', debug=True)
