@@ -4,7 +4,7 @@ import datetime
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:plat4life@localhost/jarvisDB'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:plat4life@localhost/jarvisDB'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -20,10 +20,10 @@ class Articles(db.Model):
         self.title = title
         self.body = body
 
-@app.route('/get', methods = ['GET'])
+
+@app.route('/get', methods=['GET'])
 def get_articles():
     return jsonify({'Hello': 'World'})
-
 
 
 if __name__ == '__main__':
