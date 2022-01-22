@@ -4315,7 +4315,7 @@ fieldset:disabled .btn {
 
 .navbar {
   position: relative;
-  display: -ms-flexbox;
+  display: -ms-flexbox, inline-block;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -4373,8 +4373,6 @@ fieldset:disabled .btn {
 }
 
 .navbar-collapse {
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
   -ms-flex-positive: 1;
   flex-grow: 1;
   -ms-flex-align: center;
@@ -11931,6 +11929,10 @@ fieldset:disabled .btn {
   box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
   transition: background-color .15s ease-in-out, border .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
   border-radius: 0.25rem;
+}
+
+.nav-item{
+  display: inline-block;
 }
 
 .nav-tabs .nav-item {
