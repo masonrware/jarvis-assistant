@@ -69,5 +69,14 @@ def update_article(id):
     return article_schema.jsonify(article)
 
 
+@app.route('/delete/<id>/', methods=['DELETE'])
+def article_delete(id):
+    article = Articles.query.get(id)
+
+    db.session.delete(article)
+    db.session.commit()
+    return article_schema.jsonify(article)
+
+
 if __name__ == '__main__':
     app.run(host='localhost', debug=True)
