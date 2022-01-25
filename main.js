@@ -10,6 +10,7 @@ function createWindow() {
     mainWindow.loadFile('src/ui/index.html')
     
     // mainWindow.webContents.openDevTools()
+
     let menu = Menu.buildFromTemplate([
         {
             label:"File",

@@ -4,7 +4,6 @@ const body = document.getElementById('taskDescription')
 
 const articles = document.getElementById('articles')
 
-
 const insertData = (newData) => {
     fetch('http://localhost:5000/add', {
         method: 'POST',
@@ -24,7 +23,7 @@ const getAllData = () => {
     fetch('http://localhost:5000/get', {
         method:'GET',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type':'application/json'
         }
     })
     .then(resp => resp.json())
@@ -67,3 +66,5 @@ myform.addEventListener('submit', (e) => {
 
     insertData(newData)
 })
+
+getAllData()
