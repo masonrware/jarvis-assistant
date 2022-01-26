@@ -9,7 +9,7 @@ function createWindow() {
     })
     mainWindow.loadFile('src/ui/index.html')
     
-    // mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
 
     let menu = Menu.buildFromTemplate([
         {

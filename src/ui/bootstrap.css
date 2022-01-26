@@ -673,7 +673,7 @@ progress {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .container, .container-sm, .container-md, .container-lg {
     max-width: 960px;
   }
@@ -1324,7 +1324,7 @@ progress {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .col-lg {
     -ms-flex: 1 0 0%;
     flex: 1 0 0%;
@@ -3847,7 +3847,7 @@ fieldset:disabled .btn {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .dropdown-menu-lg-start {
     --bs-position: start;
   }
@@ -4217,7 +4217,6 @@ fieldset:disabled .btn {
   padding: 0.5rem 1rem;
   color: #7b8ab8;
   text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4546,7 +4545,7 @@ fieldset:disabled .btn {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .navbar-expand-lg {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -5679,7 +5678,7 @@ fieldset:disabled .btn {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .list-group-horizontal-lg {
     -ms-flex-direction: row;
     flex-direction: row;
@@ -6162,7 +6161,7 @@ fieldset:disabled .btn {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .modal-lg,
   .modal-xl {
     max-width: 800px;
@@ -7211,7 +7210,7 @@ fieldset:disabled .btn {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .sticky-lg-top {
     position: -webkit-sticky;
     position: sticky;
@@ -9768,7 +9767,7 @@ fieldset:disabled .btn {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 10px) {
   .float-lg-start {
     float: left !important;
   }
@@ -12188,4 +12187,26 @@ fieldset:disabled .btn {
 
 .list-group-item {
   background-color: transparent;
+}
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }

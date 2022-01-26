@@ -38,33 +38,37 @@ function renderArticles(mydata) {
         <div class="card mb-3">
             <h3 class="card-header">${data.title}</h3>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                <h5 class="card-title">DUE DATE</h5>
+                <h6 class="card-subtitle text-muted">TIME LEFT</h6>
             </div>
             <div class="card-body">
                 <p class="card-text">${data.body}</p>
             </div>
             <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" vcfclass="card-link">Another link</a>
+                <a href="#" class="card-link">OPTIONAL LINK</a>
             </div>
             <div class="card-footer text-muted">
-                2 days ago
+                REPLACE WITH TIME DIF
             </div>
+            <button type="button" class="btn btn-outline-primary" class="btn btn-primary">UPDATE TASK</button>
+            <button type="button" class="btn btn-outline-dark" class="btn btn-primary">DELETE TASK</button>
         </div>
         `
     })
 }
 
+
 myform.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    const newData = {
-        title:title.value,
-        body:body.value
+    if(title.value!=''&&body.value!=''){
+        e.preventDefault()
+        const newData = {
+            title:title.value,
+            body:body.value
+        }
+        insertData(newData);
+    } else {
+        alert('Please enter a title or description')
     }
-
-    insertData(newData)
 })
 
 getAllData()

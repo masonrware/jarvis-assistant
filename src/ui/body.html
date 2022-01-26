@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <link rel='stylesheet' type='text/css' href='./bootstrap.css'>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='viewport' content="width=device-width, initial-scale=1">
+        
+        <title>Python and ElectronJS</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a id='navbar' class="navbar-brand">Navbar</a>
+                <script type="text/javascript">
+                    document.getElementById("navbar").onclick = function () {
+                        location.href = "./index.html";
+                    };
+                </script>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                    <a id="home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+        <main class='container-fluid'>
+            <form id='taskForm'>
+                <details>
+                    <summary><h1>+</h1></summary>
+                    <div class="nav nav-pills flex-column">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="taskName" class="form-label mt-4">Enter New Task:</label>
+                                <textarea placeholder='Enter Task Title' style='width:80%' class='form-control' id='taskName' rows='1'></textarea>
+                                <textarea placeholder='Enter Task Details' style='width:80%' class="form-control" id="taskDescription" rows="3"></textarea>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </fieldset>
+                    </div>
+                </details>
+              </form>
+              <br><br>
+              <div id='articles'>
+              </div>
+        </main>
+        <script src = './app.js'></script>
+    </body>
+    <footer>
+      <small class="text-muted">MASON WARE ©2022</small>
+    </footer>
+</html>
