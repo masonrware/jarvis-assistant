@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a id='navbar' class="navbar-brand">Navbar</a>
+                <a id='navbar' class="navbar-brand">JARVIS</a>
                 <script type="text/javascript">
                     document.getElementById("navbar").onclick = function () {
                         location.href = "./index.html";
@@ -20,10 +20,15 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                    <a id="home" class="nav-link">Home</a>
+                    <a id="home" class="nav-link">TASKS</a>
+                    <script type="text/javascript">
+                        document.getElementById("home").onclick = function () {
+                            location.href = "./tasks.html";
+                        };
+                    </script>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">CLASSES</a>
                     </li>
                 </div>
             </div>
@@ -31,7 +36,7 @@
         <main class='container-fluid'>
             <form id='taskForm'>
                 <details>
-                    <summary><h1>+</h1></summary>
+                    <summary><strong><h1>NEW CLASS</h1></strong></summary>
                     <div class="nav nav-pills flex-column">
                         <fieldset>
                             <div class="form-group">
@@ -46,8 +51,6 @@
                 </details>
               </form>
               <br><br>
-              <div id='articles'>
-              </div>
         </main>
         <script src = './app.js'></script>
     </body>

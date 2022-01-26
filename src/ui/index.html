@@ -10,19 +10,24 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a id='navbar' class="navbar-brand">Navbar</a>
+                <a id='navbar' class="navbar-brand">JARVIS</a>
                 <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                    <a id="home" class="nav-link">Home</a>
+                    <a id="home" class="nav-link">TASKS</a>
                     <script type="text/javascript">
                         document.getElementById("home").onclick = function () {
-                            location.href = "./body.html";
+                            location.href = "./tasks.html";
                         };
                     </script>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" id='classes'>CLASSES</a>
+                    <script type="text/javascript">
+                        document.getElementById("classes").onclick = function () {
+                            location.href = "./classes.html";
+                        };
+                    </script>
                     </li>
                 </div>
             </div>
