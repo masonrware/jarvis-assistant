@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name='viewport' content="width=device-width, initial-scale=1">
-        
+
         <title>Python and ElectronJS</title>
     </head>
     <body>
@@ -35,14 +35,37 @@
         </nav>
         <main class='container-fluid'>
             <form id='taskForm'>
+<!--edit below form to be appropriate for class info-->
+
                 <details>
                     <summary><strong><h1>NEW CLASS</h1></strong></summary>
                     <div class="nav nav-pills flex-column">
                         <fieldset>
                             <div class="form-group">
-                                <label for="taskName" class="form-label mt-4">Enter New Task:</label>
-                                <textarea placeholder='Enter Task Title' style='width:80%' class='form-control' id='taskName' rows='1'></textarea>
-                                <textarea placeholder='Enter Task Details' style='width:80%' class="form-control" id="taskDescription" rows="3"></textarea>
+                                <label for="taskName" class="form-label mt-4">Enter New Class:</label>
+                                <textarea placeholder='Enter Class Name' style='width:80%' class='form-control' id='className' rows='1'></textarea>
+                                <br>
+                                <div class="weekDays-selector" id='classDays' value=''>
+                                    <input type="checkbox" id="weekday-sun" class="weekday btn btn-primary" />
+                                    <label for="weekday-sun">S</label>
+                                    <script>document.getElementById('classDays').values+='Sa'; console.log(document.getElementById('classDays').value)</script>
+                                    <input type="checkbox" id="weekday-mon" class="weekday btn btn-primary" />
+                                    <label for="weekday-mon">M</label>
+                                    <input type="checkbox" id="weekday-tue" class="weekday btn btn-primary" />
+                                    <label for="weekday-tue">T</label>
+                                    <input type="checkbox" id="weekday-wed" class="weekday btn btn-primary" />
+                                    <label for="weekday-wed">W</label>
+                                    <input type="checkbox" id="weekday-thu" class="weekday btn btn-primary" />
+                                    <label for="weekday-thu">T</label>
+                                    <input type="checkbox" id="weekday-fri" class="weekday btn btn-primary" />
+                                    <label for="weekday-fri">F</label>
+                                    <input type="checkbox" id="weekday-sat" class="weekday btn btn-primary" />
+                                    <label for="weekday-sat">S</label>
+                                </div>
+                                <br>
+                                <!-- <input name="WorkWeek" class="form-control days-of-week" id="workWeek" type="text" value="" data-bind="value: WorkWeek"> -->
+                                <textarea placeholder='Enter Start Time' style='width:80%' class='form-control' id='classStart' rows='1'></textarea>
+                                <textarea placeholder='Enter End Time' style='width:80%' class='form-control' id='classEnd' rows='1'></textarea>`
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -52,7 +75,7 @@
               </form>
               <br><br>
         </main>
-        <script src = './app.js'></script>
+        <script src = './classes.js'></script>
     </body>
     <footer>
       <small class="text-muted">MASON WARE ©2022</small>
