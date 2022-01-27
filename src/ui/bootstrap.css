@@ -12189,24 +12189,24 @@ fieldset:disabled .btn {
   background-color: transparent;
 }
 
+.weekDays-selector input {
+  display: none!important;
+}
 
-.collapsible {
-  background-color: #777;
-  color: white;
+.weekDays-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 40px;
+  width: 30px;
+  margin-right: 3px;
+  line-height: 40px;
+  text-align: center;
   cursor: pointer;
-  padding: 18px;
-  border: none;
-  outline: none;
-  font-size: 15px;
 }
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
+.weekDays-selector input[type=checkbox]:checked + label {
+  color: #000;
+  background-color: #d9e3f1;
+  border-color: #d9e3f1;
 }
