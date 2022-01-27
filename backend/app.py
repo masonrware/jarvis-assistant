@@ -87,7 +87,7 @@ def article_delete(id):
 class Courses(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
-    days = db.Column(db.String(100))
+    days = db.Column(db.String())
     start_time = db.Column(db.String(100))
     end_time = db.Column(db.String(100))
 
@@ -123,7 +123,7 @@ def course_details(id):
 @app.route('/addCourse/', methods=['POST'])
 def add_course():
     name = request.json['name']
-    days = request.json['days']
+    days = str(request.json['days'])
     start_time = request.json['start_time']
     end_time = request.json['end_time']
 

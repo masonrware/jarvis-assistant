@@ -46,26 +46,27 @@
                                 <textarea placeholder='Enter Class Name' style='width:80%' class='form-control' id='className' rows='1'></textarea>
                                 <br>
                                 <div class="weekDays-selector" id='classDays' value=''>
-                                    <input type="checkbox" id="weekday-sun" class="weekday btn btn-primary" />
+                                    <input type="checkbox" id="weekday-sun" class="weekday btn btn-primary" onclick="dayPress('Sa')"/>
                                     <label for="weekday-sun">S</label>
-                                    <script>document.getElementById('classDays').values+='Sa'; console.log(document.getElementById('classDays').value)</script>
-                                    <input type="checkbox" id="weekday-mon" class="weekday btn btn-primary" />
+                                    <input type="checkbox" id="weekday-mon" class="weekday btn btn-primary" onclick="dayPress('M')"/>
                                     <label for="weekday-mon">M</label>
-                                    <input type="checkbox" id="weekday-tue" class="weekday btn btn-primary" />
+                                    <input type="checkbox" id="weekday-tue" class="weekday btn btn-primary" onclick="dayPress('Tu')"/>
                                     <label for="weekday-tue">T</label>
-                                    <input type="checkbox" id="weekday-wed" class="weekday btn btn-primary" />
+                                    <input type="checkbox" id="weekday-wed" class="weekday btn btn-primary" onclick="dayPress('W')"/>
                                     <label for="weekday-wed">W</label>
-                                    <input type="checkbox" id="weekday-thu" class="weekday btn btn-primary" />
+                                    <input type="checkbox" id="weekday-thu" class="weekday btn btn-primary" onclick="dayPress('Th')"/>
                                     <label for="weekday-thu">T</label>
-                                    <input type="checkbox" id="weekday-fri" class="weekday btn btn-primary" />
+                                    <input type="checkbox" id="weekday-fri" class="weekday btn btn-primary" onclick="dayPress('F')"/>
                                     <label for="weekday-fri">F</label>
-                                    <input type="checkbox" id="weekday-sat" class="weekday btn btn-primary" />
+                                    <input type="checkbox" id="weekday-sat" class="weekday btn btn-primary" onclick="dayPress('Su')"/>
                                     <label for="weekday-sat">S</label>
                                 </div>
                                 <br>
                                 <!-- <input name="WorkWeek" class="form-control days-of-week" id="workWeek" type="text" value="" data-bind="value: WorkWeek"> -->
-                                <textarea placeholder='Enter Start Time' style='width:80%' class='form-control' id='classStart' rows='1'></textarea>
-                                <textarea placeholder='Enter End Time' style='width:80%' class='form-control' id='classEnd' rows='1'></textarea>`
+                                <label class='text-muted'>Enter Start Time:</label>
+                                <input type="time" id="classStart" min="01:00" max="24:00" required>
+                                <label class='text-muted'>Enter End Time:</label>
+                                <input type="time" id="classEnd" min="01:00" max="24:00" required>
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -74,6 +75,9 @@
                 </details>
               </form>
               <br><br>
+
+            <div id='articles'></div>
+
         </main>
         <script src = './classes.js'></script>
     </body>

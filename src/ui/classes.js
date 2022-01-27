@@ -1,6 +1,7 @@
 const myform = document.getElementById('taskForm')
 const className = document.getElementById('className')
 const classDays = document.getElementById('classDays')
+classDays.value = []
 const startTime = document.getElementById('classStart')
 const endTime = document.getElementById('classEnd')
 
@@ -40,7 +41,6 @@ const deleteTaskData = (id) => {
             'Content-Type':'application/json'
         }
     })
-
     getAllTaskData();
 }
 
@@ -62,13 +62,13 @@ function renderArticles(mydata) {
     mydata.forEach(data => {
         articles.innerHTML +=  `
         <div class="card mb-3">
-            <h3 class="card-header">${data.title}</h3>
+            <h3 class="card-header">${data.name}</h3>
             <div class="card-body">
-                <h5 class="card-title">DUE DATE</h5>
+                <h5 class="card-subtitle">${data.start_time} - ${data.end_time}</h5>
                 <h6 class="card-subtitle text-muted">TIME LEFT</h6>
             </div>
             <div class="card-body">
-                <p class="card-text">${data.body}</p>
+                <p class="card-text">${data.days}</p>
             </div>
             <div class="card-body">
                 <a href="#" class="card-link">OPTIONAL LINK</a>
@@ -84,27 +84,33 @@ function renderArticles(mydata) {
 }
 
 myform.addEventListener('submit', (e) => {
-    // if(title.value!=''&&body.value!=''){
-    //     e.preventDefault()
-    //     const newData = {
-    //         title:title.value,
-    //         body:body.value
-    //     }
-    //     insertTask(newData);
-    //     myform.reset();
-    // } else {
-    //     alert('Please enter a title or description')
-    // }
-    e.preventDefault()
-    const newClass = {
-        title:className.value,
-        days:classDays.value,
-        start:startTime.value,
-        end:endTime.value
+    if(className.value!=''&&startTime!=''&&endTime!=''&&classDays.value.length!=0){
+        e.preventDefault();
+        const newClass = {
+            name:className.value,
+            days:classDays.value,
+            start_time:startTime.value,
+            end_time:endTime.value
+        }
+        console.log(newClass);
+        insertTask(newClass);
+        myform.reset();
+    } else {
+        alert('Please enter all required information.');
     }
-    console.log(newClass)
+    
 })
 
+function dayPress(day) {
+    if(!classDays.value.includes(day)){
+       classDays.value.push(day) 
+    } else {
+        const index = classDays.value.indexOf(day);
+        if (index > -1) {
+            classDays.value.splice(index, 1);
+        }               
+    }
+}
 
 
 getAllTaskData()
