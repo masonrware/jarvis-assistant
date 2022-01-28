@@ -46,19 +46,19 @@
                                 <textarea placeholder='Enter Class Name' style='width:80%' class='form-control' id='className' rows='1'></textarea>
                                 <br>
                                 <div class="weekDays-selector" id='classDays' value=''>
-                                    <input type="checkbox" id="weekday-sun" class="weekday btn btn-primary" onclick="dayPress('Su')"/>
+                                    <input type="checkbox" id="weekday-sun" class="weekday btn btn-primary" onclick="dayPress('sunday')"/>
                                     <label for="weekday-sun">S</label>
-                                    <input type="checkbox" id="weekday-mon" class="weekday btn btn-primary" onclick="dayPress('M')"/>
+                                    <input type="checkbox" id="weekday-mon" class="weekday btn btn-primary" onclick="dayPress('monday')"/>
                                     <label for="weekday-mon">M</label>
-                                    <input type="checkbox" id="weekday-tue" class="weekday btn btn-primary" onclick="dayPress('Tu')"/>
+                                    <input type="checkbox" id="weekday-tue" class="weekday btn btn-primary" onclick="dayPress('tuesday')"/>
                                     <label for="weekday-tue">T</label>
-                                    <input type="checkbox" id="weekday-wed" class="weekday btn btn-primary" onclick="dayPress('W')"/>
+                                    <input type="checkbox" id="weekday-wed" class="weekday btn btn-primary" onclick="dayPress('wednesday')"/>
                                     <label for="weekday-wed">W</label>
-                                    <input type="checkbox" id="weekday-thu" class="weekday btn btn-primary" onclick="dayPress('Th')"/>
+                                    <input type="checkbox" id="weekday-thu" class="weekday btn btn-primary" onclick="dayPress('thursday')"/>
                                     <label for="weekday-thu">T</label>
-                                    <input type="checkbox" id="weekday-fri" class="weekday btn btn-primary" onclick="dayPress('F')"/>
+                                    <input type="checkbox" id="weekday-fri" class="weekday btn btn-primary" onclick="dayPress('friday')"/>
                                     <label for="weekday-fri">F</label>
-                                    <input type="checkbox" id="weekday-sat" class="weekday btn btn-primary" onclick="dayPress('Sa')"/>
+                                    <input type="checkbox" id="weekday-sat" class="weekday btn btn-primary" onclick="dayPress('saturday')"/>
                                     <label for="weekday-sat">S</label>
                                 </div>
                                 <br>
@@ -75,9 +75,332 @@
                 </details>
               </form>
               <br><br>
-
-            <div id='articles'></div>
-
+              <table class="table table-hover" style='border:2px solid black'>
+                <thead>
+                  <tr>
+                    <th scope='col' style='width:12.5%'>Time</th>
+                    <th scope="col" style='width:12.5%'>Sunday</th>
+                    <th scope="col" style='width:12.5%'>Monday</th>
+                    <th scope="col" style='width:12.5%'>Tuesday</th>
+                    <th scope="col" style='width:12.5%'>Wednesday</th>
+                    <th scope="col" style='width:12.5%'>Thursday</th>
+                    <th scope="col" style='width:12.5%'>Friday</th>
+                    <th scope="col" style='width:12.5%'>Saturday</th>
+                  </tr>
+                </thead>
+                <tbody style='border:1px solid black'>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>7:00 AM</td>
+                        <td id='sunday700' style='border:1px solid grey'></td>
+                        <td id='monday700' style='border:1px solid grey'></td>
+                        <td id='tuesday700' style='border:1px solid grey'></td>
+                        <td id='wednesday700' style='border:1px solid grey'></td>
+                        <td id='thursday700' style='border:1px solid grey'></td>
+                        <td id='friday700' style='border:1px solid grey'></td>
+                        <td id='saturday700' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>7:30 AM</td>
+                        <td id='sunday730' style='border:1px solid grey'></td>
+                        <td id='monday730' style='border:1px solid grey'></td>
+                        <td id='tuesday730' style='border:1px solid grey'></td>
+                        <td id='wednesday730' style='border:1px solid grey'></td>
+                        <td id='thursday730' style='border:1px solid grey'></td>
+                        <td id='friday730' style='border:1px solid grey'></td>
+                        <td id='saturday730' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>8:00 AM</td>
+                        <td id='sunday800' style='border:1px solid grey'></td>
+                        <td id='monday800' style='border:1px solid grey'></td>
+                        <td id='tuesday800' style='border:1px solid grey'></td>
+                        <td id='wednesday800' style='border:1px solid grey'></td>
+                        <td id='thursday800' style='border:1px solid grey'></td>
+                        <td id='friday800' style='border:1px solid grey'></td>
+                        <td id='saturday800' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>8:30 AM</td>
+                        <td id='sunday830' style='border:1px solid grey'></td>
+                        <td id='monday830' style='border:1px solid grey'></td>
+                        <td id='tuesday830' style='border:1px solid grey'></td>
+                        <td id='wednesday830' style='border:1px solid grey'></td>
+                        <td id='thursday830' style='border:1px solid grey'></td>
+                        <td id='friday830' style='border:1px solid grey'></td>
+                        <td id='saturday830' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>9:00 AM</td>
+                        <td id='sunday900' style='border:1px solid grey'></td>
+                        <td id='monday900' style='border:1px solid grey'></td>
+                        <td id='tuesday900' style='border:1px solid grey'></td>
+                        <td id='wednesday900' style='border:1px solid grey'></td>
+                        <td id='thursday900' style='border:1px solid grey'></td>
+                        <td id='friday900' style='border:1px solid grey'></td>
+                        <td id='saturday900' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>9:30 AM</td>
+                        <td id='sunday930' style='border:1px solid grey'></td>
+                        <td id='monday930' style='border:1px solid grey'></td>
+                        <td id='tuesday930' style='border:1px solid grey'></td>
+                        <td id='wednesday930' style='border:1px solid grey'></td>
+                        <td id='thursday930' style='border:1px solid grey'></td>
+                        <td id='friday930' style='border:1px solid grey'></td>
+                        <td id='saturday930' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>10:00 AM</td>
+                        <td id='sunday1000' style='border:1px solid grey'></td>
+                        <td id='monday1000' style='border:1px solid grey'></td>
+                        <td id='tuesday1000' style='border:1px solid grey'></td>
+                        <td id='wednesday1000' style='border:1px solid grey'></td>
+                        <td id='thursday1000' style='border:1px solid grey'></td>
+                        <td id='friday1000' style='border:1px solid grey'></td>
+                        <td id='saturday1000' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>10:30 AM</td>
+                        <td id='sunday1030' style='border:1px solid grey'></td>
+                        <td id='monday1030' style='border:1px solid grey'></td>
+                        <td id='tuesday1030' style='border:1px solid grey'></td>
+                        <td id='wednesday1030' style='border:1px solid grey'></td>
+                        <td id='thursday1030' style='border:1px solid grey'></td>
+                        <td id='friday1030' style='border:1px solid grey'></td>
+                        <td id='saturday1030' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>11:00 AM</td>
+                        <td id='sunday1100' style='border:1px solid grey'></td>
+                        <td id='monday1100' style='border:1px solid grey'></td>
+                        <td id='tuesday1100' style='border:1px solid grey'></td>
+                        <td id='wednesday1100' style='border:1px solid grey'></td>
+                        <td id='thursday1100' style='border:1px solid grey'></td>
+                        <td id='friday1100' style='border:1px solid grey'></td>
+                        <td id='saturday1100' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>11:30 AM</td>
+                        <td id='sunday1130' style='border:1px solid grey'></td>
+                        <td id='monday1130' style='border:1px solid grey'></td>
+                        <td id='tuesday1130' style='border:1px solid grey'></td>
+                        <td id='wednesday1130' style='border:1px solid grey'></td>
+                        <td id='thursday1130' style='border:1px solid grey'></td>
+                        <td id='friday1130' style='border:1px solid grey'></td>
+                        <td id='saturday1130' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>12:00 PM</td>
+                        <td id='sunday1200' style='border:1px solid grey'></td>
+                        <td id='monday1200' style='border:1px solid grey'></td>
+                        <td id='tuesday1200' style='border:1px solid grey'></td>
+                        <td id='wednesday1200' style='border:1px solid grey'></td>
+                        <td id='thursday1200' style='border:1px solid grey'></td>
+                        <td id='friday1200' style='border:1px solid grey'></td>
+                        <td id='saturday1200' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>12:30 PM</td>
+                        <td id='sunday1230' style='border:1px solid grey'></td>
+                        <td id='monday1230' style='border:1px solid grey'></td>
+                        <td id='tuesday1230' style='border:1px solid grey'></td>
+                        <td id='wednesday1230' style='border:1px solid grey'></td>
+                        <td id='thursday1230' style='border:1px solid grey'></td>
+                        <td id='friday1230' style='border:1px solid grey'></td>
+                        <td id='saturday1230' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>1:00 PM</td>
+                        <td id='sunday1300' style='border:1px solid grey'></td>
+                        <td id='monday1300' style='border:1px solid grey'></td>
+                        <td id='tuesday1300' style='border:1px solid grey'></td>
+                        <td id='wednesday1300' style='border:1px solid grey'></td>
+                        <td id='thursday1300' style='border:1px solid grey'></td>
+                        <td id='friday1300' style='border:1px solid grey'></td>
+                        <td id='saturday1300' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>1:30 PM</td>
+                        <td id='sunday1330' style='border:1px solid grey'></td>
+                        <td id='monday1330' style='border:1px solid grey'></td>
+                        <td id='tuesday1330' style='border:1px solid grey'></td>
+                        <td id='wednesday1330' style='border:1px solid grey'></td>
+                        <td id='thursday1330' style='border:1px solid grey'></td>
+                        <td id='friday1330' style='border:1px solid grey'></td>
+                        <td id='saturday1330' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>2:00 PM</td>
+                        <td id='sunday1400' style='border:1px solid grey'></td>
+                        <td id='monday1400' style='border:1px solid grey'></td>
+                        <td id='tuesday1400' style='border:1px solid grey'></td>
+                        <td id='wednesday1400' style='border:1px solid grey'></td>
+                        <td id='thursday1400' style='border:1px solid grey'></td>
+                        <td id='friday1400' style='border:1px solid grey'></td>
+                        <td id='saturday1400' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>2:30 PM</td>
+                        <td id='sunday1430' style='border:1px solid grey'></td>
+                        <td id='monday1430' style='border:1px solid grey'></td>
+                        <td id='tuesday1430' style='border:1px solid grey'></td>
+                        <td id='wednesday1430' style='border:1px solid grey'></td>
+                        <td id='thursday1430' style='border:1px solid grey'></td>
+                        <td id='friday1430' style='border:1px solid grey'></td>
+                        <td id='saturday1430' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>3:00 PM</td>
+                        <td id='sunday1500' style='border:1px solid grey'></td>
+                        <td id='monday1500' style='border:1px solid grey'></td>
+                        <td id='tuesday1500' style='border:1px solid grey'></td>
+                        <td id='wednesday1500' style='border:1px solid grey'></td>
+                        <td id='thursday1500' style='border:1px solid grey'></td>
+                        <td id='friday1500' style='border:1px solid grey'></td>
+                        <td id='saturday1500' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>3:30 PM</td>
+                        <td id='sunday1530' style='border:1px solid grey'></td>
+                        <td id='monday1530' style='border:1px solid grey'></td>
+                        <td id='tuesday1530' style='border:1px solid grey'></td>
+                        <td id='wednesday1530' style='border:1px solid grey'></td>
+                        <td id='thursday1530' style='border:1px solid grey'></td>
+                        <td id='friday1530' style='border:1px solid grey'></td>
+                        <td id='saturday1530' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>4:00 PM</td>
+                        <td id='sunday1600' style='border:1px solid grey'></td>
+                        <td id='monday1600' style='border:1px solid grey'></td>
+                        <td id='tuesday1600' style='border:1px solid grey'></td>
+                        <td id='wednesday1600' style='border:1px solid grey'></td>
+                        <td id='thursday1600' style='border:1px solid grey'></td>
+                        <td id='friday1600' style='border:1px solid grey'></td>
+                        <td id='saturday1600' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>4:30 PM</td>
+                        <td id='sunday1630' style='border:1px solid grey'></td>
+                        <td id='monday1630' style='border:1px solid grey'></td>
+                        <td id='tuesday1630' style='border:1px solid grey'></td>
+                        <td id='wednesday1630' style='border:1px solid grey'></td>
+                        <td id='thursday1630' style='border:1px solid grey'></td>
+                        <td id='friday1630' style='border:1px solid grey'></td>
+                        <td id='saturday1630' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>5:00 PM</td>
+                        <td id='sunday1700' style='border:1px solid grey'></td>
+                        <td id='monday1700' style='border:1px solid grey'></td>
+                        <td id='tuesday1700' style='border:1px solid grey'></td>
+                        <td id='wednesday1700' style='border:1px solid grey'></td>
+                        <td id='thursday1700' style='border:1px solid grey'></td>
+                        <td id='friday1700' style='border:1px solid grey'></td>
+                        <td id='saturday1700' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>5:30 PM</td>
+                        <td id='sunday1730' style='border:1px solid grey'></td>
+                        <td id='monday1730' style='border:1px solid grey'></td>
+                        <td id='tuesday1730' style='border:1px solid grey'></td>
+                        <td id='wednesday1730' style='border:1px solid grey'></td>
+                        <td id='thursday1730' style='border:1px solid grey'></td>
+                        <td id='friday1730' style='border:1px solid grey'></td>
+                        <td id='saturday1730' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>6:00 PM</td>
+                        <td id='sunday1800' style='border:1px solid grey'></td>
+                        <td id='monday1800' style='border:1px solid grey'></td>
+                        <td id='tuesday1800' style='border:1px solid grey'></td>
+                        <td id='wednesday1800' style='border:1px solid grey'></td>
+                        <td id='thursday1800' style='border:1px solid grey'></td>
+                        <td id='friday1800' style='border:1px solid grey'></td>
+                        <td id='saturday1800' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>6:30 PM</td>
+                        <td id='sunday1830' style='border:1px solid grey'></td>
+                        <td id='monday1830' style='border:1px solid grey'></td>
+                        <td id='tuesday1830' style='border:1px solid grey'></td>
+                        <td id='wednesday1830' style='border:1px solid grey'></td>
+                        <td id='thursday1830' style='border:1px solid grey'></td>
+                        <td id='friday1830' style='border:1px solid grey'></td>
+                        <td id='saturday1830' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>7:00 PM</td>
+                        <td id='sunday1900' style='border:1px solid grey'></td>
+                        <td id='monday1900' style='border:1px solid grey'></td>
+                        <td id='tuesday1900' style='border:1px solid grey'></td>
+                        <td id='wednesday1900' style='border:1px solid grey'></td>
+                        <td id='thursday1900' style='border:1px solid grey'></td>
+                        <td id='friday1900' style='border:1px solid grey'></td>
+                        <td id='saturday1900' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>7:30 PM</td>
+                        <td id='sunday1930' style='border:1px solid grey'></td>
+                        <td id='monday1930' style='border:1px solid grey'></td>
+                        <td id='tuesday1930' style='border:1px solid grey'></td>
+                        <td id='wednesday1930' style='border:1px solid grey'></td>
+                        <td id='thursday1930' style='border:1px solid grey'></td>
+                        <td id='friday1930' style='border:1px solid grey'></td>
+                        <td id='saturday1930' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>8:00 PM</td>
+                        <td id='sunday2000' style='border:1px solid grey'></td>
+                        <td id='monday2000' style='border:1px solid grey'></td>
+                        <td id='tuesday2000' style='border:1px solid grey'></td>
+                        <td id='wednesday2000' style='border:1px solid grey'></td>
+                        <td id='thursday2000' style='border:1px solid grey'></td>
+                        <td id='friday2000' style='border:1px solid grey'></td>
+                        <td id='saturday2000' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>8:30 PM</td>
+                        <td id='sunday2030' style='border:1px solid grey'></td>
+                        <td id='monday2030' style='border:1px solid grey'></td>
+                        <td id='tuesday2030' style='border:1px solid grey'></td>
+                        <td id='wednesday2030' style='border:1px solid grey'></td>
+                        <td id='thursday2030' style='border:1px solid grey'></td>
+                        <td id='friday2030' style='border:1px solid grey'></td>
+                        <td id='saturday2030' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>9:00 PM</td>
+                        <td id='sunday2100' style='border:1px solid grey'></td>
+                        <td id='monday2100' style='border:1px solid grey'></td>
+                        <td id='tuesday2100' style='border:1px solid grey'></td>
+                        <td id='wednesday2100' style='border:1px solid grey'></td>
+                        <td id='thursday2100' style='border:1px solid grey'></td>
+                        <td id='friday2100' style='border:1px solid grey'></td>
+                        <td id='saturday2100' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>9:30 PM</td>
+                        <td id='sunday2130' style='border:1px solid grey'></td>
+                        <td id='monday2130' style='border:1px solid grey'></td>
+                        <td id='tuesday2130' style='border:1px solid grey'></td>
+                        <td id='wednesday2130' style='border:1px solid grey'></td>
+                        <td id='thursday2130' style='border:1px solid grey'></td>
+                        <td id='friday2130' style='border:1px solid grey'></td>
+                        <td id='saturday2130' style='border:1px solid grey'></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td style='border:1px solid black'>10:00 PM</td>
+                        <td id='sunday2200' style='border:1px solid grey'></td>
+                        <td id='monday2200' style='border:1px solid grey'></td>
+                        <td id='tuesday2200' style='border:1px solid grey'></td>
+                        <td id='wednesday2200' style='border:1px solid grey'></td>
+                        <td id='thursday2200' style='border:1px solid grey'></td>
+                        <td id='friday2200' style='border:1px solid grey'></td>
+                        <td id='saturday2200' style='border:1px solid grey'></td>
+                    </tr>
+                </tbody>
+            </table>
         </main>
         <script src = './classes.js'></script>
     </body>
