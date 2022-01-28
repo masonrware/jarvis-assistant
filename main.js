@@ -5,7 +5,7 @@ function createWindow() {
     const mainWindow = new BrowserWindow({
         width: 1020,
         height: 770,
-        icon: 'src/public/tempIcon.ico'
+        icon: '/src/public/tempIcon.ico'
     })
     mainWindow.loadFile('src/ui/index.html')
     
