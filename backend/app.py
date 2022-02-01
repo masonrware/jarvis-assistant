@@ -87,7 +87,7 @@ def article_delete(id):
 class Courses(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
-    days = db.Column(db.String())
+    days = db.Column(db.String(100))
     start_time = db.Column(db.String(100))
     end_time = db.Column(db.String(100))
 
