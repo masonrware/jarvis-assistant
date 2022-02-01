@@ -5,7 +5,7 @@ const body = document.getElementById('taskDescription')
 const articles = document.getElementById('articles')
 
 const insertTask = (newData) => {
-    fetch('http://localhost:5000/add', {
+    fetch('http://localhost:5000/add/', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
@@ -20,7 +20,7 @@ const insertTask = (newData) => {
 }
 
 const getAllTaskData = () => {
-    fetch('http://localhost:5000/get', {
+    fetch('http://localhost:5000/get/', {
         method:'GET',
         headers: {
             'Content-Type':'application/json'
@@ -87,11 +87,13 @@ function renderArticles(mydata) {
 }
 
 myform.addEventListener('submit', (e) => {
+    //alert with if checks
     e.preventDefault()
     const newData = {
         title:title.value,
         body:body.value
     }
+    console.log(newData)
     insertTask(newData);
     myform.reset()
 })
