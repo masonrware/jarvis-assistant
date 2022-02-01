@@ -67,13 +67,15 @@ function renderCalendar(mydata){
     mydata.forEach(data => {
         name_ = mydata.name
         days_ = mydata.days
-        ///////
         console.log(days)
         startTime_ = mydata.start_time
         endTime_ = mydata.end_time
 
-        //go through number of days 
-        //and then time difference
+        //formula for number of divs needed:
+        //end-start = ?XXX
+        //separate ?XXX into ?X and XX (potential ten thousandths and thousands place vales / tenth and hundreths place values)
+        //total_divs = 2(?X) + {1 if XX > 0}
+        
 
         time_diff = endTime_ - startTime_
 
