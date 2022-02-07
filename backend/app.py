@@ -36,7 +36,7 @@ article_schema = ArticleSchema()
 articles_schema = ArticleSchema(many=True)
 
 
-@app.route('/get', methods=['GET'])
+@app.route('/get/', methods=['GET'])
 def get_articles():
     all_articles = Articles.query.all()
     result = articles_schema.dump(all_articles)
@@ -49,7 +49,7 @@ def post_details(id):
     return article_schema.jsonify(article)
 
 
-@app.route('/add', methods=['POST'])
+@app.route('/add/', methods=['POST'])
 def add_article():
     title = request.json['title']
     body = request.json['body']

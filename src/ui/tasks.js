@@ -10,7 +10,7 @@ const insertTask = (newData) => {
         headers: {
             'Content-type': 'application/json'
         },
-        body:JSON.stringify(newData)
+        body: JSON.stringify(newData)
     })
     .then(resp => resp.json())
     .then(() => {
