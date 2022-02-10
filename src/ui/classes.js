@@ -1,3 +1,5 @@
+const { stat } = require("original-fs")
+
 const myform = document.getElementById('taskForm')
 const className = document.getElementById('className')
 const classDays = document.getElementById('classDays')
@@ -28,7 +30,7 @@ const getAllTaskData = () => {
         }
     })
     .then(resp => resp.json())
-    .then(data => renderArticles(data))
+    .then(data => renderCalendar(data))
     .catch(error => console.log(error))
 }
 
@@ -56,18 +58,10 @@ const getTestDataById = (id) => {
 }
 
 function renderCalendar(mydata){
-    const sunday700 = document.getElementById('sunday700')
-    const monday700 = document.getElementById('monday700')
-    const tuesday700 = document.getElementById('tuesday700')
-    const wednesday700 = document.getElementById('wednesday700')
-    const thursday700 = document.getElementById('thursday700')
-    const friday700 = document.getElementById('friday700')
-    const saturday700 = document.getElementById('saturday700')
 
     mydata.forEach(data => {
         name_ = mydata.name
         days_ = mydata.days
-        console.log(days)
         startTime_ = mydata.start_time
         endTime_ = mydata.end_time
 
@@ -78,14 +72,42 @@ function renderCalendar(mydata){
         
 
         time_diff = endTime_ - startTime_
+        var digits = time_diff.toString().split('');
+        var realDigits = digits.map(Number)
+        
+        time_diff = endTime_ - startTime_
+        var digits = time_diff.toString().split('');
+        var realDigits = digits.map(Number)
 
 
-        var i, holder = {};
-        for(i=0; i<time_diff; i++) {
-            holder [n[i]] = '';//TODO
+        if (realDigits.length == 3) {
+            var hrs = realDigits.splice(0,1);
+            var mins = realDigits.splice(0,3);
+        } else if (realDigits.length == 4) {
+            var hrs = realDigits.splice(0,2);
+            var mins = realDigits.splice(0,4);
         }
 
+        var numBoxes = 2*(hrs.join(""));
+        if(mins[0] != 0) {
+            numBoxes += 1;
+        }
 
+        console.log(numBoxes);
+        console.log(startTime);
+
+        //using the starttime, there will be two for each loops: one that maps through the days and one that maps through the numBoxes:
+        //for each day and for each box, increment by 30 on starttime and create a document id from the day and time.
+        days.forEach(day => {
+            var parsedCurTime = parseInt(startTime.replace(':', ''));
+            var parsedEndTime = parseInt(endTime.replace(':', ''));
+
+            while(parsedCurTime!=parsedEndTime){
+                var res = `${day}${parsedCurTime}`;  
+                console.log(res);
+                break;
+            }
+        })
     })
 }
 
